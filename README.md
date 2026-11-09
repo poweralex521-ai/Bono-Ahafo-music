@@ -1,5 +1,7 @@
 # BOMA Digital Platform
 
+The Bono-Ahafo-music project for musicians and instrumentalists.
+
 A Node.js/Express and MongoDB application for the Bono Musicians Association. Public pages, member/coordinator/admin workspaces, member invitations, profile review, directory verification, and booking request intake are separate, directly addressable pages. Public profiles are read from approved member records; the directory does not substitute sample records for database results.
 
 The authenticated dashboards and public pages share a responsive navy-and-gold design system, modeled on the reference screenshot in `imageproject/Bono Musicians Association Dashboard.png`. Public pages use a consistent mobile navigation and footer. The member dashboard shows live counts, approved directory profiles, a QR membership card and received booking requests; empty states are used for unsupported services rather than sample data.
