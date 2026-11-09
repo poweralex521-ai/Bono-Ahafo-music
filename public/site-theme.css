@@ -245,6 +245,8 @@ html { overflow-x: clip; }
 .site-content-editor > .admin-heading > div { min-width: 0; }
 .site-content-editor > .admin-heading h2 { margin: 0 0 6px; }
 .site-content-editor > .admin-heading p { max-width: 650px; margin: 0; color: var(--site-muted); font-size: 12px; line-height: 1.7; }
+.site-storage-notice { margin: 0; padding: 12px 14px; border: 1px solid rgba(255, 218, 80, .35); border-radius: 9px; background: rgba(245, 189, 22, .08); color: #e7d8aa; font-size: 11px; line-height: 1.65; }
+.site-storage-notice strong { color: var(--site-gold-soft); }
 .site-content-editor #site-content-form { display: grid; gap: 16px; }
 .site-editor-group { min-width: 0; margin: 0; padding: 19px; border: 1px solid #293d5d; border-radius: 11px; }
 .site-editor-group legend { padding: 0 8px; color: var(--site-gold-soft); font-size: 12px; font-weight: 700; }

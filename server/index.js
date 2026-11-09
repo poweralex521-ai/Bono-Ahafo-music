@@ -30,6 +30,7 @@ if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 32) {
 }
 
 app.disable('x-powered-by');
+if (process.env.RENDER === 'true') app.set('trust proxy', 1);
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
@@ -675,7 +676,7 @@ app.get('/api/member/dashboard', requireAuth, requireRole('member'), async (req,
     ]);
 
     if (!member) return res.status(404).json({ error: 'Member profile not found.' });
-    const publicBaseUrl = (process.env.PUBLIC_BASE_URL || `${req.protocol}://${req.get('host')}`).replace(/\/+$/, '');
+    const publicBaseUrl = (process.env.PUBLIC_BASE_URL || process.env.RENDER_EXTERNAL_URL || `${req.protocol}://${req.get('host')}`).replace(/\/+$/, '');
     const verificationUrl = member.membershipId
       ? `${publicBaseUrl}/verify.html?membershipId=${encodeURIComponent(member.membershipId)}`
       : null;
