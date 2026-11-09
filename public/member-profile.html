@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>My Profile | BMA</title><link rel="stylesheet" href="/workspace.css">    <script src="/site.js" defer></script>
+  </head>
+  <body class="workspace-page"><div class="workspace-app" id="workspace-app" data-workspace-role="member" data-workspace-page="profile">
+    <main class="workspace-main">
+      <div class="workspace-page-heading"><div><p class="workspace-eyebrow">MY ACCOUNT</p><h1>Your professional <em>profile.</em></h1><p>Profile changes are sent to the association for review.</p></div></div>
+      <div class="member-profile-layout">
+        <aside class="profile-summary-card"><img id="profile-photo" class="profile-summary-photo" alt="Your profile photo" hidden><div id="profile-photo-placeholder" class="profile-summary-photo">♫</div><h2 id="profile-summary-name">Member profile</h2><p id="member-ident"></p><a class="ws-button ws-button-quiet" href="/my-membership.html">Membership card</a></aside>
+        <section class="admin-section"><form class="admin-form profile-form" id="profile-form">
+          <label>Profession<input name="profession" maxlength="80"></label><label>Location<input name="location" maxlength="120"></label>
+          <label>Phone<input name="phone" type="tel" maxlength="40"></label><label>Years of experience<input name="yearsExperience" type="number" min="0" max="100" step="1"></label>
+          <label>Instruments, comma separated<input name="instruments" maxlength="1000"></label><label>Genres, comma separated<input name="genres" maxlength="1000"></label>
+          <label>Booking price in GHS (optional)<input name="bookingPrice" type="number" min="0" step="0.01"></label><label>Availability<input name="availability" maxlength="120" placeholder="e.g. Weekends, bookings open"></label>
+          <label class="wide-field">Portfolio URL<input name="portfolioUrl" type="url" maxlength="1000" placeholder="https://"></label>
+          <label class="wide-field">Biography<textarea name="biography" maxlength="2000" rows="6"></textarea></label>
+          <div class="wide-field"><p class="form-message" id="profile-message" aria-live="polite"></p><button class="button button-dark">Save and submit for review <span>↗</span></button></div>
+        </form></section>
+      </div>
+      <p class="workspace-error" id="member-welcome" role="status"></p>
+    </main>
+  </div><script src="/workspace.js" defer></script><script src="/member.js" defer></script></body>
+</html>

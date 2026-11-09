@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101b2c">
+    <title>Member portal | BOMA</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/site.js" defer></script>
+  </head>
+  <body class="portal-page">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="BOMA home">
+        <span class="brand-mark">B</span>
+        <span><strong>BONO MUSICIANS</strong><small>ASSOCIATION</small></span>
+      </a>
+      <button class="logout-button" id="logout-button" type="button">Sign out <span>↗</span></button>
+    </header>
+    <main class="portal-main">
+      <div class="section-kicker">BOMA MEMBER PORTAL</div>
+      <h1>Good to have you <em>here.</em></h1>
+      <p class="portal-welcome" id="portal-welcome">Loading your secure account…</p>
+      <div class="portal-grid" id="portal-content" aria-live="polite"></div>
+    </main>
+    <script src="/portal.js" defer></script>
+  </body>
+</html>

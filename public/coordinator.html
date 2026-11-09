@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Group Coordinator | BMA</title><link rel="stylesheet" href="/workspace.css"><script src="/site.js" defer></script></head>
+  <body class="workspace-page">
+    <div class="workspace-app" id="workspace-app" data-workspace-role="coordinator" data-workspace-page="dashboard">
+    <main class="workspace-main admin-main">
+      <div class="section-kicker">COORDINATOR WORKSPACE</div><h1>Your group, <em>together.</em></h1><p class="portal-welcome" id="group-welcome">Loading group assignment…</p>
+      <section class="report-stat-grid admin-stat-grid">
+        <article class="report-stat"><span>GROUP MEMBERS</span><strong id="group-total-members">—</strong></article>
+        <article class="report-stat"><span>ACTIVE MEMBERS</span><strong id="group-active-members">—</strong></article>
+        <article class="report-stat"><span>INVITED / PENDING</span><strong id="group-pending-members">—</strong></article>
+      </section>
+      <section class="workspace-info-card group-assignment" id="group"><h2>Assigned group</h2><p id="group-name">Loading your authorized group…</p><p>Coordinator access is restricted to this group by the backend.</p></section>
+      <section class="admin-section" id="invite"><h2>Invite a member</h2><p>Members can only be invited into your assigned group. Invitations expire after 72 hours.</p>
+        <form class="admin-form" id="invite-form">
+          <label>Full name<input name="fullName" required maxlength="120"></label><label>Email<input name="email" type="email" required maxlength="254"></label>
+          <input type="hidden" name="role" value="member"><input type="hidden" name="group" id="member-group">
+          <label>Phone<input name="phone" type="tel" maxlength="40"></label><label>Profession<input name="profession" maxlength="80"></label><label>Location<input name="location" maxlength="120"></label>
+          <button class="button button-dark">Create member invitation <span>↗</span></button>
+        </form>
+        <p class="form-message" id="invite-result" aria-live="polite"></p>
+      </section>
+      <section class="admin-section" id="members"><div class="admin-heading"><h2>Members in your group</h2><button class="button button-quiet-dark" id="refresh-members">Refresh</button></div><p class="form-message" id="members-message" aria-live="polite"></p>
+        <div class="table-wrap"><table><thead><tr><th>Member</th><th>Membership ID</th><th>Status</th><th>Profile</th><th>Invited</th></tr></thead><tbody id="members-table"></tbody></table></div>
+      </section>
+      <section class="workspace-info-card"><h2>Group reports &amp; dues information</h2><p>Member counts above use the current group member records. Dues, payment status and downloadable financial reports are not available because no financial APIs exist in the backend.</p></section>
+      <p class="workspace-error" id="workspace-error" role="status"></p>
+    </main></div>
+    <script src="/workspace.js" defer></script><script src="/coordinator.js" defer></script>
+  </body>
+</html>

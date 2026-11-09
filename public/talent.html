@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Verified professional profile from the Bono Musicians Association."><title>Talent Profile | BOMA</title><link rel="stylesheet" href="/styles.css">    <script src="/site.js" defer></script>
+  </head>
+  <body class="content-page">
+    <header class="site-header"><a class="brand" href="/" aria-label="BOMA home"><span class="brand-mark">B</span><span><strong>BONO MUSICIANS</strong><small>ASSOCIATION</small></span></a><a class="back-home" href="/directory.html">← Back to directory</a></header>
+    <main class="talent-page section">
+      <a class="text-link" href="/directory.html">← All verified talent</a>
+      <p class="form-message" id="talent-message" aria-live="polite">Loading approved profile…</p>
+      <section id="talent-profile" class="talent-profile"></section>
+      <section class="admin-section booking-page-section">
+        <div class="section-kicker">BOOKING ENQUIRY</div><h2>Request this professional.</h2><p>Send an event request directly through the BOMA booking system.</p>
+        <form class="admin-form profile-form" id="booking-form">
+          <input type="hidden" name="talentId">
+          <label>Your name<input name="organizerName" required maxlength="120"></label><label>Email<input name="organizerEmail" type="email" required maxlength="254"></label>
+          <label>Phone<input name="organizerPhone" type="tel" required maxlength="40"></label><label>Event name<input name="eventName" required maxlength="160"></label>
+          <label>Event date<input name="eventDate" type="date" required></label><label>Event location<input name="location" required maxlength="160"></label>
+          <label class="wide-field">Event details<textarea name="details" maxlength="2000" rows="4"></textarea></label>
+          <div class="wide-field"><p class="form-message" id="booking-message" aria-live="polite"></p><button class="button button-dark">Send booking request <span>↗</span></button></div>
+        </form>
+      </section>
+    </main>
+    <footer><div class="footer-main"><a class="brand brand-footer" href="/"><span class="brand-mark">B</span><span><strong>BONO MUSICIANS</strong><small>ASSOCIATION</small></span></a><p>Celebrating the people and sounds<br>of Bono, Ghana.</p><a class="footer-contact" href="/contact.html">Contact the association <span>↗</span></a></div><div class="footer-bottom"><span>© <span id="year"></span> Bono Musicians Association</span><span>MADE FOR THE MUSIC COMMUNITY</span></div></footer>
+    <script src="/app.js" defer></script><script src="/talent.js" defer></script>
+  </body>
+</html>

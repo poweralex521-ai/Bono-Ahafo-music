@@ -1,0 +1,29 @@
+{
+  "name": "boma-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bono Musicians Association management and talent booking platform",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed:admin": "node server/scripts/seed-admin.js",
+    "check": "node --check server/index.js && node --check server/models/User.js && node --check server/models/SiteContent.js && node --check server/models/Booking.js && node --check server/models/Invitation.js && node --check server/models/Counter.js && node --check server/models/AuditLog.js && node --check server/scripts/seed-admin.js && node --check public/app.js && node --check public/site.js && node --check public/site-admin.js && node --check public/login.js && node --check public/portal.js && node --check public/invite.js && node --check public/admin.js && node --check public/coordinator.js && node --check public/member.js && node --check public/member-dashboard.js && node --check public/member-pages.js && node --check public/member-bookings.js && node --check public/workspace.js && node --check public/talent.js && node --check public/verify.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^2.5.0",
+    "qrcode": "^1.5.4",
+    "zod": "^4.6.6"
+  }
+}

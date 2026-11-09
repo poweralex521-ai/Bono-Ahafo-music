@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Administration | BOMA</title><link rel="stylesheet" href="/workspace.css"><script src="/site.js" defer></script></head>
+  <body class="workspace-page">
+    <div class="workspace-app" id="workspace-app" data-workspace-role="super_admin" data-workspace-page="dashboard">
+    <main class="workspace-main admin-main">
+      <div class="section-kicker">SUPER ADMINISTRATION</div><h1>Member <em>management.</em></h1><p class="portal-welcome" id="admin-welcome">Loading secure administration…</p>
+      <section class="report-stat-grid admin-stat-grid">
+        <article class="report-stat"><span>REGISTERED MEMBERS</span><strong id="admin-total-members">—</strong></article>
+        <article class="report-stat"><span>ACTIVE MEMBERS</span><strong id="admin-active-members">—</strong></article>
+        <article class="report-stat"><span>PENDING INVITATIONS</span><strong id="admin-pending-members">—</strong></article>
+        <article class="report-stat"><span>COORDINATORS</span><strong id="admin-coordinators-count">—</strong></article>
+        <article class="report-stat"><span>PENDING BOOKINGS</span><strong id="admin-bookings-count">—</strong></article>
+      </section>
+      <section class="admin-section" id="invite"><h2>Invite a member or coordinator</h2><p>Create a restricted, 72-hour invitation. Share the generated link with the invited person.</p>
+        <form class="admin-form" id="invite-form">
+          <label>Full name<input name="fullName" required maxlength="120"></label><label>Email<input name="email" type="email" required maxlength="254"></label>
+          <label>Account type<select name="role"><option value="member">Member</option><option value="coordinator">Group coordinator</option></select></label>
+          <label>Group or branch<input name="group" required maxlength="120"></label><label>Phone<input name="phone" type="tel" maxlength="40"></label>
+          <button class="button button-dark">Create invitation <span>↗</span></button>
+        </form>
+        <p class="form-message" id="invite-result" aria-live="polite"></p>
+      </section>
+      <section class="admin-section" id="members"><div class="admin-heading"><h2>Members</h2><button class="button button-quiet-dark" id="refresh-members">Refresh</button></div><p class="form-message" id="members-message" aria-live="polite"></p><div class="table-wrap"><table><thead><tr><th>Member</th><th>ID</th><th>Group</th><th>Status</th><th>Profile</th><th>Actions</th></tr></thead><tbody id="members-table"></tbody></table></div></section>
+      <section class="admin-section" id="coordinators"><div class="admin-heading"><h2>Coordinators</h2><button class="button button-quiet-dark" id="refresh-coordinators">Refresh</button></div><p class="form-message" id="coordinators-message" aria-live="polite"></p><div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Group</th><th>Status</th><th>Actions</th></tr></thead><tbody id="coordinators-table"></tbody></table></div></section>
+      <section class="admin-section" id="booking-requests"><div class="admin-heading"><h2>Booking requests</h2><button class="button button-quiet-dark" id="refresh-bookings">Refresh</button></div><p class="form-message" id="bookings-message" aria-live="polite"></p><div class="table-wrap"><table><thead><tr><th>Professional</th><th>Event</th><th>Organizer</th><th>Date / Location</th><th>Status</th></tr></thead><tbody id="bookings-table"></tbody></table></div></section>
+      <section class="admin-section site-content-editor" id="website-content">
+        <div class="admin-heading"><div><h2>Website content</h2><p>Update public pages, photos, social channels and download links. Saved content is published immediately.</p></div><button class="button button-quiet-dark" id="reload-site-content" type="button">Reload</button></div>
+        <p class="form-message" id="site-content-status" role="status" aria-live="polite"></p>
+        <form id="site-content-form">
+          <fieldset class="site-editor-group">
+            <legend>About page</legend>
+            <div class="admin-form">
+              <label>Section label<input name="about.heroEyebrow" data-site-field="about.heroEyebrow" required maxlength="80"></label>
+              <label>Headline<input name="about.heroTitle" data-site-field="about.heroTitle" required maxlength="160"></label>
+              <label class="site-editor-wide">Introduction<textarea name="about.heroDescription" data-site-field="about.heroDescription" required maxlength="800" rows="3"></textarea></label>
+              <label>Purpose headline<input name="about.purposeTitle" data-site-field="about.purposeTitle" required maxlength="160"></label>
+              <label class="site-editor-wide">About BMA<textarea name="about.introduction" data-site-field="about.introduction" required maxlength="3000" rows="5"></textarea></label>
+              <label class="site-editor-wide">Membership &amp; approval information<textarea name="about.membershipNote" data-site-field="about.membershipNote" maxlength="1500" rows="4"></textarea></label>
+            </div>
+          </fieldset>
+          <fieldset class="site-editor-group">
+            <legend>Footer &amp; social media</legend>
+            <div class="admin-form">
+              <label>Footer message<input name="footer.tagline" data-site-field="footer.tagline" required maxlength="200"></label>
+              <label>Contact page link<input name="footer.contactUrl" data-site-field="footer.contactUrl" required maxlength="500" placeholder="/contact.html"></label>
+              <label>Powered by<input name="footer.poweredBy" data-site-field="footer.poweredBy" required maxlength="80"></label>
+              <label>OTWOTECH website (optional)<input name="footer.poweredByUrl" data-site-field="footer.poweredByUrl" type="url" maxlength="500" placeholder="https://…"></label>
+              <label>Facebook URL<input name="socials.facebook" data-site-field="socials.facebook" type="url" maxlength="500" placeholder="https://…"></label>
+              <label>Instagram URL<input name="socials.instagram" data-site-field="socials.instagram" type="url" maxlength="500" placeholder="https://…"></label>
+              <label>YouTube URL<input name="socials.youtube" data-site-field="socials.youtube" type="url" maxlength="500" placeholder="https://…"></label>
+              <label>TikTok URL<input name="socials.tiktok" data-site-field="socials.tiktok" type="url" maxlength="500" placeholder="https://…"></label>
+              <label>Google Play app link<input name="appLinks.googlePlay" data-site-field="appLinks.googlePlay" type="url" maxlength="500" placeholder="https://…"></label>
+              <label>Apple App Store link<input name="appLinks.appleAppStore" data-site-field="appLinks.appleAppStore" type="url" maxlength="500" placeholder="https://…"></label>
+            </div>
+          </fieldset>
+          <fieldset class="site-editor-group">
+            <legend>Directors &amp; leadership</legend>
+            <div class="site-editor-rows-heading"><p>Add official director names, roles, biographies and photographs.</p><button class="button button-quiet-dark" type="button" data-add-site-item="directors">Add director</button></div>
+            <div id="directors-editor" class="site-editor-rows"></div>
+          </fieldset>
+          <fieldset class="site-editor-group">
+            <legend>Sponsors</legend>
+            <div class="site-editor-rows-heading"><p>Add sponsor names, logos and optional websites.</p><button class="button button-quiet-dark" type="button" data-add-site-item="sponsors">Add sponsor</button></div>
+            <div id="sponsors-editor" class="site-editor-rows"></div>
+          </fieldset>
+          <fieldset class="site-editor-group">
+            <legend>Photo gallery</legend>
+            <div class="site-editor-rows-heading"><p>Add approved BMA community event and performance photos.</p><button class="button button-quiet-dark" type="button" data-add-site-item="gallery">Add gallery image</button></div>
+            <div id="gallery-editor" class="site-editor-rows"></div>
+          </fieldset>
+          <div class="site-editor-save"><p>Use genuine association-approved names and images. Uploaded JPG, PNG and WebP files are limited to 6 MB each.</p><button class="button button-gold" id="save-site-content" type="submit">Save &amp; publish website <span aria-hidden="true">↗</span></button></div>
+        </form>
+      </section>
+      <section class="workspace-info-card admin-service-status" id="platform-status"><h2>Platform service status</h2><p>Content, leadership, sponsors, photo gallery and site links are managed using the website editor above.</p><div class="service-status-grid"><span>Site content &amp; photo gallery <b>Configured</b></span><span>Video uploads &amp; media moderation <b>Not configured</b></span><span>Booking notifications <b>Not configured</b></span><span>Audit log viewer <b>Not available</b></span></div></section>
+      <section class="workspace-info-card admin-service-status" id="finance-status"><h2>Finance &amp; payment status</h2><p>No dues, payments, expenses, Paystack configuration or transaction-verification endpoints exist in this project. Payment status is not inferred or shown as successful.</p><div class="service-status-grid"><span>Paystack integration <b>Not configured</b></span><span>Membership dues ledger <b>Not configured</b></span><span>Financial reports &amp; expenses <b>Not configured</b></span></div></section>
+      <p class="workspace-error" id="workspace-error" role="status"></p>
+    </main></div>
+    <script src="/workspace.js" defer></script><script src="/admin.js" defer></script><script src="/site-admin.js" defer></script>
+  </body>
+</html>

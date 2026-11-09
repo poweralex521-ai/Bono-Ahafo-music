@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>My Membership | BMA</title><link rel="stylesheet" href="/workspace.css">    <script src="/site.js" defer></script>
+  </head>
+  <body class="workspace-page"><div class="workspace-app" id="workspace-app" data-workspace-role="member" data-workspace-page="membership">
+    <main class="workspace-main">
+      <div class="workspace-page-heading"><div><p class="workspace-eyebrow">MEMBERSHIP</p><h1>Your BMA <em>membership.</em></h1><p>Your card is generated from your current association account.</p></div><button class="ws-button ws-button-gold" id="print-membership" type="button">⇩ &nbsp; Download / print card</button></div>
+      <section class="dashboard-grid membership-dashboard-grid">
+        <article class="membership-card membership-page-card" id="membership-card">
+          <div class="membership-card-top"><span>BMA <i>OFFICIAL MEMBER</i></span><b>✓</b></div>
+          <div class="membership-card-person"><div class="member-card-photo" id="card-photo"><span>♫</span></div><h2 id="card-name">Loading member…</h2><p id="card-profession">Bono Musicians Association</p><div class="card-membership-id" id="card-id">Loading membership ID</div><div class="card-status"><span>MEMBERSHIP STATUS</span><strong id="card-status">Loading</strong></div><div class="card-status"><span>MEMBER SINCE</span><strong id="member-since">Loading</strong></div><div class="card-status"><span>VALID UNTIL</span><strong id="card-expiry">Not set</strong></div></div>
+          <div class="membership-card-bottom"><div id="card-qr" class="member-qr"><span>Creating verification QR…</span></div><p>Scan to check<br>membership status</p></div>
+        </article>
+        <div>
+          <section class="workspace-info-card"><h2>Membership details</h2><ul class="workspace-info-list"><li>Membership ID is assigned by the association.</li><li>Public verification reveals only basic membership status.</li><li>Membership expiry is not configured in the current system.</li><li>Cards print from the details currently stored in your account.</li></ul></section>
+          <section class="workspace-info-card"><h2>Verification status</h2><p id="membership-verification-status">Loading membership verification…</p><a class="ws-button ws-button-quiet" href="/verify.html">Open public verification</a></section>
+        </div>
+      </section>
+      <p class="workspace-error" id="member-page-message" role="status"></p>
+    </main>
+  </div><script src="/workspace.js" defer></script><script src="/member-pages.js" defer></script></body>
+</html>

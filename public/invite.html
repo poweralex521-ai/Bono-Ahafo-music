@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accept invitation | BOMA</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/site.js" defer></script>
+  </head>
+  <body class="login-page">
+    <header class="site-header"><a class="brand" href="/"><span class="brand-mark">B</span><span><strong>BONO MUSICIANS</strong><small>ASSOCIATION</small></span></a><a class="back-home" href="/">← Back to BOMA</a></header>
+    <main class="login-main">
+      <section class="login-card">
+        <div class="section-kicker">SECURE INVITATION</div><h1>Welcome to <em>BOMA.</em></h1>
+        <p>Set a password to verify your invited email. Your account will be available after association approval.</p>
+        <form id="invite-form">
+          <label>Create password<input name="password" type="password" autocomplete="new-password" minlength="12" maxlength="200" required></label>
+          <label>Confirm password<input name="confirmPassword" type="password" autocomplete="new-password" minlength="12" maxlength="200" required></label>
+          <p class="form-message" id="invite-message" aria-live="polite"></p>
+          <button class="button button-dark" type="submit">Accept invitation <span>↗</span></button>
+        </form>
+        <a class="login-help" href="/contact.html">Need help? Contact your BOMA coordinator.</a>
+      </section>
+    </main>
+    <script src="/invite.js" defer></script>
+  </body>
+</html>

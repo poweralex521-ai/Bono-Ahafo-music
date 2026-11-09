@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101b2c">
+    <title>Member sign in | BOMA</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/site.js" defer></script>
+  </head>
+  <body class="login-page">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="BOMA home">
+        <span class="brand-mark">B</span>
+        <span><strong>BONO MUSICIANS</strong><small>ASSOCIATION</small></span>
+      </a>
+      <a class="back-home" href="/">← Back to BOMA</a>
+    </header>
+    <main class="login-main">
+      <section class="login-card">
+        <div class="section-kicker">MEMBER PORTAL</div>
+        <h1>Welcome <em>back.</em></h1>
+        <p>Sign in to access your BOMA account. Membership registration is by invitation only.</p>
+        <form id="login-form">
+          <label>Email address<input name="email" type="email" autocomplete="username" required maxlength="254"></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" required maxlength="200"></label>
+          <p class="form-message" id="login-message" aria-live="polite"></p>
+          <button class="button button-dark" type="submit">Sign in <span>↗</span></button>
+        </form>
+        <a class="login-help" href="/">Need an invitation? Contact an approved BOMA coordinator.</a>
+      </section>
+    </main>
+    <script src="/login.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07152b">
+    <meta name="description" content="Your Bono Musicians Association member dashboard.">
+    <title>Member Dashboard | BMA</title>
+    <link rel="stylesheet" href="/workspace.css">
+    <script src="/site.js" defer></script>
+  </head>
+  <body class="workspace-page">
+    <div class="workspace-app" id="workspace-app" data-workspace-role="member" data-workspace-page="dashboard">
+      <main class="workspace-main dashboard-main">
+        <div class="workspace-page-heading"><div><p class="workspace-eyebrow">MEMBER DASHBOARD</p><h1>Welcome back, <em id="dashboard-member-name">member</em>.</h1><p>Your music community, all in one place.</p></div><a class="ws-button ws-button-quiet" href="/member-profile.html">Edit your profile <span>↗</span></a></div>
+        <div class="dashboard-grid">
+          <aside class="dashboard-left">
+            <section class="membership-card" id="membership-card">
+              <div class="membership-card-top"><span>BMA <i>OFFICIAL MEMBER</i></span><b>✓</b></div>
+              <div class="membership-card-person">
+                <div class="member-card-photo" id="member-card-photo"><span>♫</span></div>
+                <h2 id="card-member-name">Member profile</h2>
+                <p id="card-member-profession">Bono Musicians Association</p>
+                <div class="card-membership-id" id="card-membership-id">Membership ID pending</div>
+                <div class="card-status"><span>MEMBERSHIP STATUS</span><strong id="card-member-status">Loading</strong></div>
+                <div class="card-status"><span>VALID UNTIL</span><strong id="card-validity">Checking</strong></div>
+              </div>
+              <div class="membership-card-bottom"><div id="member-qr" class="member-qr"><span>QR will appear after membership is assigned.</span></div><p>Scan to verify<br>membership</p></div>
+              <button class="ws-button ws-button-gold card-download" id="download-card" type="button">⇩ &nbsp; Download membership card</button>
+            </section>
+          </aside>
+          <div class="dashboard-center">
+            <section class="dashboard-hero">
+              <div class="dashboard-hero-copy"><p class="workspace-eyebrow">TALENT · UNITY · PROGRESS</p><h2>Bono Musicians<br><em>Association</em></h2><strong>Discover · Connect · Perform</strong><p>A trusted platform to find musicians, instrumentalists, bands, engineers and more in Bono.</p><a class="ws-button ws-button-gold" href="/directory.html">Explore Talent <span>→</span></a></div>
+            </section>
+            <section class="stat-grid" aria-label="Association statistics">
+              <article class="stat-card stat-members"><span class="stat-icon">♙</span><div><strong id="stat-members">—</strong><span>Total Members</span></div></article>
+              <article class="stat-card stat-talent"><span class="stat-icon">♫</span><div><strong id="stat-talent">—</strong><span>Available Talent</span></div></article>
+              <article class="stat-card stat-events"><span class="stat-icon">▦</span><div><strong id="stat-events">—</strong><span>Upcoming Events</span></div></article>
+              <article class="stat-card stat-bookings"><span class="stat-icon">⇄</span><div><strong id="stat-bookings">—</strong><span>Your Bookings</span></div></article>
+            </section>
+            <section class="panel featured-panel">
+              <div class="panel-heading"><h2><span class="gold-icon">★</span> Featured Musicians &amp; Instrumentalists</h2><a href="/directory.html">View all <span>→</span></a></div>
+              <div class="featured-grid" id="featured-talent"><p class="ws-empty">Loading approved member profiles…</p></div>
+            </section>
+            <div class="dashboard-lower">
+              <section class="panel videos-panel">
+                <div class="panel-heading"><h2><span class="gold-icon">▶</span> Latest Videos</h2><a href="/member-media.html">View all <span>→</span></a></div>
+                <div id="latest-videos" class="feature-empty"><span class="empty-art">▷</span><p>Member video media is not connected yet.</p><a href="/member-media.html">Open media page <span>→</span></a></div>
+              </section>
+              <section class="panel benefits-panel">
+                <div class="panel-heading"><h2><span class="gold-icon">◇</span> Membership Benefits</h2></div>
+                <ul class="benefit-list"><li>Get a verified membership card</li><li>Showcase your talent</li><li>Find professional colleagues</li><li>Book for events and programs</li><li>Access association opportunities</li></ul>
+              </section>
+            </div>
+          </div>
+          <aside class="dashboard-right">
+            <section class="panel events-panel"><div class="panel-heading"><h2>▦ &nbsp; Upcoming Events</h2><a href="/events.html">View all <span>→</span></a></div><div id="upcoming-events" class="feature-empty"><span class="empty-art">▦</span><p>Event listings are not connected yet.</p><a href="/events.html">Open events page <span>→</span></a></div></section>
+            <section class="panel quick-actions"><div class="panel-heading"><h2>✦ &nbsp; Quick Actions</h2></div><a class="quick-action action-purple" href="/bands.html"><span>♬</span>Book a Band</a><a class="quick-action action-green" href="/member-profile.html#profile-form"><span>＋</span>Showcase Your Talent</a><a class="quick-action action-orange" href="/my-payments.html"><span>▣</span>Payment Information</a></section>
+            <section class="panel payment-panel"><div class="panel-heading"><h2>◉ &nbsp; Payment Status</h2></div><div class="payment-state"><b>!</b><div><strong>Not connected</strong><p>Payment processing is not configured. No payment is being reported as paid.</p></div></div><a class="payment-link" href="/my-payments.html">View payment information <span>→</span></a></section>
+          </aside>
+        </div>
+        <p class="workspace-error" id="dashboard-error" role="status"></p>
+      </main>
+    </div>
+    <script src="/workspace.js" defer></script>
+    <script src="/member-dashboard.js" defer></script>
+  </body>
+</html>
